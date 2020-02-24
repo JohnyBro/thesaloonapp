@@ -1,0 +1,88 @@
+body
+{
+  -webkit-user-select: none;
+  background: #1F5C24;
+  color: #0D90CA;
+  background-image: url(blackdot.png);
+  background-repeat: repeat;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#logo{
+  padding: 50px;
+}
+#divOptions input{
+    width: 50px;
+}
+td, th /* Toutes les cellules des tableaux... */
+{
+  border: 1px solid black; /* auront une bordure de 1px */
+  font-family: monospace;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+table
+{
+  border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+  width: 100%;
+}
+tr {
+  background-color: #2A2929;
+  color: #D4D4D4;
+  font-size: 18px;
+}
+th {
+  padding: 5px;
+  background-color: #0D90CA; /* Orange : #4A4949; */
+  color: #D4D4D4;
+  font-size: 17px;
+}
+.tnumber {
+  width: 5%;
+}
+.tstatus {
+  width: 20%;
+}
+.ttarif{
+  width: 15%;
+}
+.ttime {
+  width: 30%;
+}
+.tcost {
+  width: 30%;
+}
+.selected
+{
+  background: #1F5C24;
+  color: orange;
+  background-image: url(blackdot.png);
+  background-repeat: repeat;
+}
+#logotext{
+  padding-top: 40px;
+  float: left;
+}
+#thesaloonlogojoueur{
+  float: right;
+  padding-left: 40px;
+}
+label {
+    display:inline-block;
+    width: 100px;
+}
+.float {
+    float:left;
+    width: 45%;
+}

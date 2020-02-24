@@ -1,0 +1,9 @@
+{
+  "name": "helloworld",
+  "main": "./src/index.html",
+  "window": {
+      "width": 858,
+      "height": 700,
+      "icon": "8ball.png"
+  }
+}
