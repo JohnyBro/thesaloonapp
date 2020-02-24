@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+
 <head>
     <title>The Saloon</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
     <div>
         <img id="logotext" src="thesaloonlogo.png" alt="The Saloon - Club Billard">
-        <img id="logojoueur"src="thesaloonlogojoueur.png" alt="The Saloon - Club Billard">
+        <img id="logojoueur" src="thesaloonlogojoueur.png" alt="The Saloon - Club Billard">
         <button id="btnOptions">Options</button>
         <div id="divOptions">
             <button id="addTable">Ajouter une table</button>
@@ -18,51 +20,70 @@
                     <legend>Tarifs de la table 1</legend>
                     <fieldset class="float">
                         <legend>Semaine</legend>
-                        <label for="tarifTable1Semaine_0">Tarif de base :</label><input type="number" id="tarifTable1Semaine_0"></br>
-                        <label for="tarifTable1Semaine_1">Réduction 1 :</label><input type="number" id="tarifTable1Semaine_1"></br>
-                        <label for="tarifTable1Semaine_2">Réduction 2 :</label><input type="number" id="tarifTable1Semaine_2">
+                        <label for="tarifTable1Semaine_0">Tarif de base :</label><input type="number"
+                            id="tarifTable1Semaine_0"></br>
+                        <label for="tarifTable1Semaine_1">Réduction 1 :</label><input type="number"
+                            id="tarifTable1Semaine_1"></br>
+                        <label for="tarifTable1Semaine_2">Réduction 2 :</label><input type="number"
+                            id="tarifTable1Semaine_2">
                     </fieldset>
                     <fieldset class="float">
                         <legend>Dimanche</legend>
-                        <label for="tarifTable1Dimanche_0">Tarif de base :</label><input type="number" id="tarifTable1Dimanche_0"></br>
-                        <label for="tarifTable1Dimanche_1">Réduction 1 :</label><input type="number" id="tarifTable1Dimanche_1"></br>
-                        <label for="tarifTable1Dimanche_2">Réduction 2 :</label><input type="number" id="tarifTable1Dimanche_2">
+                        <label for="tarifTable1Dimanche_0">Tarif de base :</label><input type="number"
+                            id="tarifTable1Dimanche_0"></br>
+                        <label for="tarifTable1Dimanche_1">Réduction 1 :</label><input type="number"
+                            id="tarifTable1Dimanche_1"></br>
+                        <label for="tarifTable1Dimanche_2">Réduction 2 :</label><input type="number"
+                            id="tarifTable1Dimanche_2">
                     </fieldset>
                 </fieldset>
                 <fieldset>
                     <legend>Tarifs des tables</legend>
                     <fieldset class="float">
                         <legend>Semaine</legend>
-                        <label for="tarifNormalSemaine_0">Tarif de base :</label><input type="number" id="tarifNormalSemaine_0"></br>
-                        <label for="tarifNormalSemaine_1">Réduction 1 :</label><input type="number" id="tarifNormalSemaine_1"></br>
-                        <label for="tarifNormalSemaine_2">Réduction 2 :</label><input type="number" id="tarifNormalSemaine_2">
+                        <label for="tarifNormalSemaine_0">Tarif de base :</label><input type="number"
+                            id="tarifNormalSemaine_0"></br>
+                        <label for="tarifNormalSemaine_1">Réduction 1 :</label><input type="number"
+                            id="tarifNormalSemaine_1"></br>
+                        <label for="tarifNormalSemaine_2">Réduction 2 :</label><input type="number"
+                            id="tarifNormalSemaine_2">
                     </fieldset>
                     <fieldset class="float">
                         <legend>Dimanche</legend>
-                        <label for="tarifNormalDimanche_0">Tarif de base :</label><input type="number" id="tarifNormalDimanche_0"></br>
-                        <label for="tarifNormalDimanche_1">Réduction 1 :</label><input type="number" id="tarifNormalDimanche_1"></br>
-                        <label for="tarifNormalDimanche_2">Réduction 2 :</label><input type="number" id="tarifNormalDimanche_2">
+                        <label for="tarifNormalDimanche_0">Tarif de base :</label><input type="number"
+                            id="tarifNormalDimanche_0"></br>
+                        <label for="tarifNormalDimanche_1">Réduction 1 :</label><input type="number"
+                            id="tarifNormalDimanche_1"></br>
+                        <label for="tarifNormalDimanche_2">Réduction 2 :</label><input type="number"
+                            id="tarifNormalDimanche_2">
                     </fieldset>
                 </fieldset>
-            </fieldset>
-        </form>
-        <div>T = Table    E = En cours     P = Mettre en pause une table      A = Arrêter une table    R = Réduction</div>
+                </fieldset>
+            </form>
+            <div>T = Table E = En cours P = Mettre en pause une table A = Arrêter une table R = Réduction</div>
+        </div>
     </div>
-</div>
 
-<table id="tables">
-    <tr><th>Table #</th><th>Status</th><th>Tarif de l'heure</th><th>Temps écoulé</th><th>Cout actuel</th></tr>
-    <!--example ligne <table>
+    <table id="tables">
+        <tr>
+            <th>Table #</th>
+            <th>Status</th>
+            <th>Tarif de l'heure</th>
+            <th>Temps écoulé</th>
+            <th>Cout actuel</th>
+        </tr>
+        <!--example ligne <table>
     <tr id="1"><td class="tnumber">1</td><td class="tstatus">en cours</td><td class="ttime">00:00:00</td><td class="tcost">0 CHF</td></tr>
 </table> -->
-</table>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jquery.leanModal.min.js"></script>
-<script type="text/javascript" src="moment.js"></script>
-<script type="text/javascript" src="momentDuration.js"></script>
+    </table>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.leanModal.min.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="momentDuration.js"></script>
 
-<script type="text/javascript" src="gestionTables.js"></script>
-<script type="text/javascript" src="options.js"></script>
-<script type="text/javascript" src="selection.js"></script>
+    <script type="text/javascript" src="gestionTables.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+    <script type="text/javascript" src="selection.js"></script>
 </body>
+
 </html>
