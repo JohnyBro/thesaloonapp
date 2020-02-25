@@ -26,6 +26,7 @@ Table.prototype.start = function(){
         case status.FINI:
             this.time = 0;
             this.cost = 0;
+            this.setTarif(0)
             break;
         case status.ENCOURS:
             return;
