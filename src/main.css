@@ -40,13 +40,13 @@ table
 tr {
   background-color: #2A2929;
   color: #D4D4D4;
-  font-size: 18px;
+  font-size: 40px;
 }
 th {
   padding: 5px;
   background-color: #0D90CA; /* Orange : #4A4949; */
   color: #D4D4D4;
-  font-size: 17px;
+  font-size: 34px;
 }
 .tnumber {
   width: 5%;

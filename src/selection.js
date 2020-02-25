@@ -16,7 +16,7 @@ const selections = {
 let selection = "table";
 let selectedTableID = null;
 let researchTableNumber = "";
-let secretCode = "test";
+let secretCode = "05071967";
 let trackSecretCode = "";
 
 $(window).keydown(function(event){
