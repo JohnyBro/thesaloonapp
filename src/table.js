@@ -16,6 +16,7 @@ function Table(number){
     this.time = 0;
     this.cost = 0;
     this.tarifIndex = 0;
+    this.isTarifSet = false;
     this.tarifHeure = (number == 1) ? config.tarifs.table1.semaine[this.tarifIndex] : config.tarifs.normal.semaine[this.tarifIndex];
 }
 
@@ -26,7 +27,7 @@ Table.prototype.start = function(){
         case status.FINI:
             this.time = 0;
             this.cost = 0;
-            this.setTarif(0)
+            if(!this.isTarifSet) this.setTarif(0);
             break;
         case status.ENCOURS:
             return;
@@ -69,6 +70,7 @@ Table.prototype.pause = function(){
 Table.prototype.stop = function(){
     if(this.status == status.FINI || this.status == status.LIBRE) return;
     this.status = status.FINI;
+    this.isTarifSet = false;
     this.timestamp = moment().format("DD.MM.YY HH:mm:ss");
     this.emit("status", this.status);
     recapManager.addEntry(this);
@@ -92,6 +94,7 @@ Table.prototype.setTarif = function(tarifNumber){
         }else{
             this.tarifHeure = config.tarifs.normal.semaine[tarifNumber];
         }
+        this.isTarifSet = true;
         this.emit("tarif", this.tarifHeure);
     }
 }

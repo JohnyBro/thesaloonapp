@@ -2,8 +2,8 @@
   "name": "helloworld",
   "main": "./src/index.html",
   "window": {
-    "width": 858,
-    "height": 700,
+    "width": 1600,
+    "height": 1080,
     "icon": "8ball.png"
   }
 }
